@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnIniciarSesion.setOnClickListener {
             login()
         }
+
+        binding.btnRegistrar.setOnClickListener {
+            registro()
+        }
     }
 
     private fun login(){
@@ -44,5 +48,9 @@ class MainActivity : AppCompatActivity() {
         else{
             Toast.makeText(this, "Algún campo está vacio", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun registro(){
+        startActivity(Intent(this, RegistroActivity::class.java))
     }
 }
